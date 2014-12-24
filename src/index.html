@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>AngularJS Unit Testing - Directives</title>
+	<style>
+		div.examples { border: 1px solid black; border-radius: 5px; padding: 5px; }
+		div.examples > div > * { padding: 0 0 0 10px; }
+		div.examples > div > h2 { padding: 0; }
+	</style>
+</head>
+<body>
+
+	<div ng-app="app">
+		<h1>AngularJS Unit Testing - Directives - Example Page</h1>
+		<p>
+			Below are examples of the directives being used in an actual HTML page.
+			To run the unit tests on these directives, launch the <a href="../test/jasmineTestPage.html">Jasmine Test Page</a>
+		</p>
+		<div class="examples" ng-controller="examplesController">
+			<div>
+				<h2>fullName</h2>
+				<full-name person="person"></full-name>
+			</div>
+			<div>
+				<h2>svgCircle</h2>
+				<svg-circle size="20" stroke="black" fill="blue"></svg-circle>
+			</div>
+		</div>
+	</div>
+
+	<!-- vendor libraries -->
+	<script data-require="angular.js" data-semver="1.2.5" src="http://code.angularjs.org/1.2.5/angular.js"></script>
+
+	<!-- app scripts -->
+	<script type="text/javascript" src="../src/js/app.js"></script>
+	<script type="text/javascript" src="../src/js/directives/fullName.js"></script>
+	<script type="text/javascript" src="../src/js/directives/svgCircle.js"></script>
+	<script type="text/javascript" src="../src/js/controllers/examplesController.js"></script>
+
+</body>
+</html>
